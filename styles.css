@@ -1,0 +1,222 @@
+/* styles.css - ItsLylla Media Kit Styles */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --pink-neon: #ec4899;
+    --pink-glow: #f43f5a;
+    --purple-dark: #240046;
+    --purple-darker: #1a002e;
+    --text-gray: #9ca3af;
+}
+
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-pink {
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.2), 0 0 20px rgba(236, 72, 153, 0.08);
+}
+
+.glow-pink-intense {
+    box-shadow:
+        0 0 12px rgba(236, 72, 153, 0.2),
+        0 0 24px rgba(236, 72, 153, 0.1),
+        inset 0 0 12px rgba(236, 72, 153, 0.05);
+}
+
+/* ===== SOCIAL ICON LINKS ===== */
+.social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--pink-neon);
+    border: 2px solid rgba(192, 132, 252, 0.4);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    position: relative;
+}
+
+.social-icon-link:hover {
+    border-color: #c084fc;
+    background: rgba(192, 132, 252, 0.1);
+}
+
+/* ===== SOCIAL CARDS ===== */
+.social-card {
+    background: rgba(88, 28, 135, 0.05);
+    border: 2px solid rgba(236, 72, 153, 0.15);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* ===== SOCIAL ICON FOLDER STYLE ===== */
+.icon-folder {
+    position: relative;
+    background: linear-gradient(135deg, rgba(88, 28, 135, 0.2) 0%, rgba(20, 20, 30, 0.4) 100%);
+    border: 2px solid rgba(236, 72, 153, 0.25);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(236, 72, 153, 0.1);
+}
+
+/* ===== PARTNERSHIP LOGOS ===== */
+.partnership-logo {
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 1rem;
+}
+
+.partnership-logo:hover {
+    transform: scale(1.1);
+}
+
+/* ===== EMAIL BUTTON ===== */
+.email-button {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border: 2px solid rgba(236, 72, 153, 0.5);
+    border-radius: 999px;
+    padding: 1rem 2rem;
+    color: var(--pink-neon);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.05em;
+}
+
+.email-button:hover {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+    border-color: rgba(236, 72, 153, 0.7);
+    transition: all 0.3s ease;
+}
+
+.email-button:active {
+    transform: translateY(0);
+}
+
+.email-button.copied {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-color: #22c55e;
+    color: #22c55e;
+    box-shadow:
+        0 0 12px rgba(34, 197, 94, 0.3),
+        0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(255, 20, 147, 0.5),
+            0 0 40px rgba(255, 20, 147, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(255, 20, 147, 0.7),
+            0 0 60px rgba(255, 20, 147, 0.5);
+    }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #streamHours {
+        font-size: 1.375rem;
+        letter-spacing: -0.02em;
+    }
+
+    #streamDays,
+    #streamDuration {
+        font-size: 1.375rem;
+    }
+
+    .social-icon-link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .email-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 640px) {
+    .social-icon-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .email-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== FOCUS STATES ===== */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--pink-neon);
+    outline-offset: 4px;
+}
+
+/* ===== TEXT SELECTION ===== */
+::selection {
+    background: var(--pink-neon);
+    color: var(--purple-darker);
+}
+
+::-moz-selection {
+    background: var(--pink-neon);
+    color: var(--purple-darker);
+}

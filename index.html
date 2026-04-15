@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kit - ItsLylla</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white overflow-x-hidden">
+    <!-- Header with Actions -->
+    <header class="fixed right-4 bottom-6 md:bottom-auto md:top-6 z-50 md:p-6 p-4 flex items-center gap-3">
+        <!-- Download PDF Button -->
+        <!-- <a href="#" download="MediaKit_Lylla.pdf"
+            class="flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500 text-black hover:bg-pink-400 transition-all duration-300 font-bold text-sm md:text-base">
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span id="pdfBtnText" class="hidden md:inline">Télécharger en PDF</span>
+            <span class="inline md:hidden">PDF</span>
+        </a> -->
+
+        <!-- Language Toggle -->
+        <button id="langToggle"
+            class="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-black transition-all duration-300 font-bold text-sm md:text-base glow-pink bg-black/80 backdrop-blur-md">
+            <span>EN</span>
+            <span class="text-xs">|</span>
+            <span>FR</span>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="min-h-screen px-4 py-16 md:py-20">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Hero Section -->
+            <section class="mb-16 md:mb-24">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                    <!-- Photo Container -->
+                    <div class="relative w-64 h-80 md:w-72 md:h-96 flex-shrink-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-1 glow-pink-intense">
+                            <div class="w-full h-full bg-black rounded-xl overflow-hidden">
+                                <img src="/assets/img/profil_pic.png" alt="ItsLylla"
+                                    class="w-full h-full object-cover rounded-xl">
+                            </div>
+                        </div>
+                        <!-- Label -->
+                        <div class="absolute -bottom-12 left-0 flex flex-col items-start gap-2">
+                            <div class="text-lg md:text-xl font-black tracking-widest text-fuchsia-400">ITSLYLLA</div>
+                            <div class="w-16 h-1.5 bg-gradient-to-r from-fuchsia-400 to-fuchsia-400/30 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Section -->
+                    <div class="mt-16 md:mt-0 flex-1 space-y-6">
+                        <h1 id="heroTitle" class="text-3xl md:text-4xl font-black tracking-tight">
+                            <span class="text-pink-500">Hi,</span> <span class="text-purple-400">I'm</span> <span class="text-pink-500">Lylla</span>
+                        </h1>
+
+                        <p id="bio" class="text-base md:text-lg text-gray-400 leading-relaxed">
+                            Hi, I'm Lylla, better known as ItsLylla on Twitch. At 24 years old, I've been a full-time
+                            streamer since 2020, after dropping everything to pursue my passion. I mainly stream League
+                            of Legends with positive, fun, and authentic energy, while sharing life moments and good
+                            vibes with my community.
+                        </p>
+
+                        <div class="pt-6 mt-8 border-t border-pink-500/20\">
+                            <a href="mailto:itslyllapro@gmail.com"
+                                class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg text-pink-500 font-bold tracking-wider hover:border-pink-500/50 hover:bg-pink-500/15 transition-all duration-300 text-sm md:text-base gap-2 group">
+                                <span id="quickContactBtn">Get In Touch</span>
+                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Links Row -->
+            <section class="mb-20 md:mb-28 mt-20">
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12 items-start">
+                    <!-- Twitch -->
+                    <div class="flex flex-col items-center gap-3">
+                        <a href="https://twitch.tv/itslylla" target="_blank" class="social-icon-link" title="Twitch">
+                            <img src="/assets/logo/twitch.svg" alt="Twitch" class="w-10 h-10">
+                        </a>
+                        <span class="text-xs md:text-sm font-bold text-purple-400 tracking-wider">ITSLYLLA</span>
+                    </div>
+
+                    <!-- TikTok -->
+                    <div class="flex flex-col items-center gap-3">
+                        <a href="https://www.tiktok.com/@itslylla_" target="_blank" class="social-icon-link"
+                            title="TikTok">
+                            <img src="/assets/logo/tiktok.svg" alt="TikTok" class="w-10 h-10">
+                        </a>
+                        <span class="text-xs md:text-sm font-bold text-purple-400 tracking-wider">ITSLYLLA</span>
+                    </div>
+
+                    <!-- X -->
+                    <div class="flex flex-col items-center gap-3">
+                        <a href="https://x.com/lylla_23" target="_blank" class="social-icon-link" title="X / Twitter">
+                            <img src="/assets/logo/twitter.svg" alt="X" class="w-10 h-10">
+                        </a>
+                        <span class="text-xs md:text-sm font-bold text-purple-400 tracking-wider">LYLLA.23</span>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="flex flex-col items-center gap-3">
+                        <a href="https://instagram.com/itslylla_01" target="_blank" class="social-icon-link"
+                            title="Instagram">
+                            <img src="/assets/logo/instagram.svg" alt="Instagram" class="w-10 h-10">
+                        </a>
+                        <span class="text-xs md:text-sm font-bold text-purple-400 tracking-wider">ITSLYLLA_01</span>
+                    </div>
+
+                    <!-- YouTube -->
+                    <div class="flex flex-col items-center gap-3">
+                        <a href="https://youtube.com/@its_lylla" target="_blank" class="social-icon-link"
+                            title="YouTube">
+                            <img src="/assets/logo/youtube.svg" alt="YouTube" class="w-10 h-10">
+                        </a>
+                        <span class="text-xs md:text-sm font-bold text-purple-400 tracking-wider">ITS_LYLLA</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="mb-20 md:mb-28">
+                <div class="mb-12">
+                    <h2 id="socialTitle"
+                        class="text-2xl md:text-3xl font-black tracking-wider text-fuchsia-400 flex items-center gap-4 mb-4">
+                        <span>SOCIAL MEDIA</span>
+                    </h2>
+                    <div class="w-full h-1 bg-gradient-to-r from-pink-500 to-transparent rounded-full"></div>
+                </div>
+
+                <!-- Social Media Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                    <!-- Twitch Card -->
+                    <div class="social-card">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 md:w-20 md:h-20 icon-folder flex items-center justify-center">
+                                <img src="/assets/logo/twitch.svg" alt="Twitch" class="w-8 h-8 md:w-10 md:h-10">
+                            </div>
+                            <div class="text-xl md:text-2xl font-black text-purple-400">32K</div>
+                        </div>
+                    </div>
+
+                    <!-- TikTok Card -->
+                    <div class="social-card">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 md:w-20 md:h-20 icon-folder flex items-center justify-center">
+                                <img src="/assets/logo/tiktok.svg" alt="TikTok" class="w-8 h-8 md:w-10 md:h-10">
+                            </div>
+                            <div class="text-xl md:text-2xl font-black text-purple-400">8.5K</div>
+                        </div>
+                    </div>
+
+                    <!-- X Card -->
+                    <div class="social-card">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 md:w-20 md:h-20 icon-folder flex items-center justify-center">
+                                <img src="/assets/logo/twitter.svg" alt="X" class="w-8 h-8 md:w-10 md:h-10">
+                            </div>
+                            <div class="text-xl md:text-2xl font-black text-purple-400">7.4K</div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Card -->
+                    <div class="social-card">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 md:w-20 md:h-20 icon-folder flex items-center justify-center">
+                                <img src="/assets/logo/instagram.svg" alt="Instagram" class="w-8 h-8 md:w-10 md:h-10">
+                            </div>
+                            <div class="text-xl md:text-2xl font-black text-purple-400">6.8K</div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Card -->
+                    <div class="social-card">
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-16 h-16 md:w-20 md:h-20 icon-folder flex items-center justify-center">
+                                <img src="/assets/logo/youtube.svg" alt="YouTube" class="w-8 h-8 md:w-10 md:h-10">
+                            </div>
+                            <div class="text-xl md:text-2xl font-black text-purple-400">1.1K</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="mb-20 md:mb-28">
+                <div class="mb-12">
+                    <h2 id="statsTitle"
+                        class="text-2xl md:text-3xl font-black tracking-wider text-fuchsia-400 flex items-center gap-4 mb-4">
+                        <span>DETAILED STATS</span>
+                    </h2>
+                    <div class="w-full h-1 bg-gradient-to-r from-pink-500 to-transparent rounded-full"></div>
+                </div>
+
+                <div class="flex flex-col items-center gap-8">
+                    <p id="statsDescription" class="text-gray-400 text-center max-w-2xl px-4">
+                        Consultez mes statistiques détaillées en temps réel via TwitchTracker pour une vision complète de ma croissance et de ma présence sur Twitch.
+                    </p>
+                    <a href="https://twitchtracker.com/itslylla" target="_blank"
+                        class="email-button hover:glow-pink transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        <span id="statsBtnText">View TwitchTracker Stats</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Partnerships Section -->
+            <section class="mb-20">
+                <div class="mb-12">
+                    <h2 id="partnershipsTitle"
+                        class="text-2xl md:text-3xl font-black tracking-wider text-fuchsia-400 flex items-center gap-4 mb-4">
+                        <span>PARTNERSHIPS</span>
+                    </h2>
+                    <div class="w-full h-1 bg-gradient-to-r from-pink-500 to-transparent rounded-full\"></div>
+                </div>
+
+                <!-- Partnership Logos -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center mt-12">
+                    <!-- Arozzi -->
+                    <a href="https://arozzi.se/fr?sca_ref=10813229.W3ytdTBXtwB3YcF" target="_blank"
+                        class="partnership-logo group">
+                        <div class="relative w-40 h-32 flex items-center justify-center">
+                            <img src="/assets/logo/Arozzi_logo_white.avif" alt="Arozzi"
+                                class="max-w-full max-h-20 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                    </a>
+
+                    <!-- Riot Games -->
+                    <a href="https://www.riotgames.com/en" target="_blank" class="partnership-logo group">
+                        <div class="relative w-40 h-32 flex items-center justify-center">
+                            <img src="/assets/logo/riotgames.png" alt="Riot Games"
+                                class="max-w-full max-h-20 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                    </a>
+
+                    <!-- Twitch -->
+                    <a href="https://www.twitch.tv/itslylla" target="_blank" class="partnership-logo group">
+                        <div class="relative w-40 h-32 flex items-center justify-center">
+                            <img src="/assets/logo/twitch-long.png" alt="Twitch"
+                                class="max-w-full max-h-20 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Stream Schedule Section -->
+            <section class="mb-20 md:mb-28">
+                <div class="mb-12">
+                    <h2 id="streamTitle"
+                        class="text-2xl md:text-3xl font-black tracking-wider text-fuchsia-400 flex items-center gap-4 mb-4">
+                        <span>STREAM SCHEDULE</span>
+                    </h2>
+                    <div class="w-full h-1 bg-gradient-to-r from-pink-500 to-transparent rounded-full\"></div>
+                </div>
+
+                <!-- Schedule Info -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+                    <!-- Days -->
+                    <div
+                        class="bg-gradient-to-br from-purple-900/20 to-black/40 border border-pink-500/20 rounded-xl p-8 text-center backdrop-filter backdrop-blur-10px hover:border-pink-500/30 transition-all duration-300 flex flex-col justify-start h-full pt-10 md:pt-12">
+                        <p id="streamFrequencyLabel"
+                            class="text-xs md:text-sm font-bold text-gray-500 mb-4 tracking-wider">FREQUENCY</p>
+                        <p id="streamDays" class="text-lg md:text-3xl font-black text-purple-400 leading-tight">Every Day
+                        </p>
+                    </div>
+
+                    <!-- Time -->
+                    <div
+                        class="bg-gradient-to-br from-purple-900/20 to-black/40 border border-pink-500/20 rounded-xl p-8 text-center backdrop-filter backdrop-blur-10px hover:border-pink-500/30 transition-all duration-300 flex flex-col justify-start h-full pt-10 md:pt-12">
+                        <p id="streamTimeLabel" class="text-xs md:text-sm font-bold text-gray-500 mb-4 tracking-wider">
+                            STREAM TIME</p>
+                        <p id="streamHours" class="text-lg md:text-3xl font-black text-purple-400 leading-tight">4:00 AM -
+                            10:00 AM</p>
+                    </div>
+
+                    <!-- Duration -->
+                    <div
+                        class="bg-gradient-to-br from-purple-900/20 to-black/40 border border-pink-500/20 rounded-xl p-8 text-center backdrop-filter backdrop-blur-10px hover:border-pink-500/30 transition-all duration-300 flex flex-col justify-start h-full pt-10 md:pt-12">
+                        <p id="streamDurationLabel"
+                            class="text-xs md:text-sm font-bold text-gray-500 mb-4 tracking-wider">DURATION</p>
+                        <p id="streamDuration" class="text-lg md:text-3xl font-black text-purple-400 leading-tight">6
+                            hours</p>
+                    </div>
+                </div>
+
+                <!-- Weekly Calendar -->
+                <div
+                    class="bg-gradient-to-br from-purple-900/20 to-black/30 border border-pink-500/20 rounded-xl p-8 backdrop-filter backdrop-blur-10px">
+                    <p id="streamWeeklyLabel" class="text-sm font-bold text-gray-500 mb-6 tracking-wider">WEEKLY
+                        SCHEDULE</p>
+                    <div class="grid grid-cols-2 md:grid-cols-7 gap-3">
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Mon</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Tue</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Wed</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Thu</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Fri</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Sat</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-500/30 rounded-lg py-4 px-3 text-center hover:border-pink-500/50 transition-all duration-300">
+                            <p data-day class="font-bold text-pink-500 text-lg">Sun</p>
+                            <p data-time-slot class="text-xs text-gray-400 mt-2">4-10 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id=\"contact\" class=\"py-16 md:py-20 border-t border-pink-500/20\">
+                <div class="text-center">
+                    <p id=\"contactLabel\" class=\"text-sm md:text-base font-bold tracking-wider text-gray-500 mb-4\">
+                        REACH OUT AT</p>
+                    <a href="mailto:itslyllapro@gmail.com" class="email-button group inline-flex">
+                        <span id="emailText">itslyllapro@gmail.com</span>
+                        <svg class="w-5 h-5 hidden group-hover:inline-block transition-opacity duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
