@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
+
+        :root {
+            --peach: #ffd9b3;
+            --pink: #ffb3c6;
+            --rose: #ff8fab;
+            --gold: #ffcb77;
+            --cream: #fff7ee;
+            --leaf: #a8d5ba;
+            --ink: #7a4a5c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: radial-gradient(circle at 20% 0%, #ffe9c7, transparent 55%),
+                radial-gradient(circle at 90% 10%, #ffc9d9, transparent 50%),
+                linear-gradient(160deg, #ffe3b8 0%, #ffc2cf 45%, #ffb6d5 100%);
+            min-height: 100vh;
+            padding: 50px 20px;
+            color: var(--ink);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* floating decorative blooms */
+        .bloom {
+            position: absolute;
+            font-size: 34px;
+            opacity: .55;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .08));
+            animation: float 7s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-14px) rotate(8deg);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 46px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            letter-spacing: 6px;
+            color: var(--rose);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 64px;
+            letter-spacing: 6px;
+            color: #fff;
+            text-shadow: 0 3px 0 var(--rose), 0 8px 18px rgba(255, 143, 171, .45);
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #a8607b;
+            font-size: 16px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 2.1fr 1fr;
+            gap: 28px;
+            max-width: 1240px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, .72);
+            backdrop-filter: blur(6px);
+            border-radius: 34px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, .9);
+            box-shadow: 0 18px 40px rgba(255, 150, 180, .25);
+        }
+
+        .panel-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--rose);
+            margin-bottom: 20px;
+        }
+
+        .panel-title .ico {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--rose));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(255, 150, 170, .45);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .goal {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--cream);
+            border-radius: 18px;
+            padding: 10px 14px;
+            border: 1px solid #ffe1ea;
+            transition: transform .15s;
+        }
+
+        .goal:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            flex-shrink: 0;
+            min-width: 38px;
+            height: 30px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--pink), var(--rose));
+            color: #fff;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .goal span.label {
+            font-weight: 600;
+            font-size: 14.5px;
+        }
+
+        .timers .timer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 13px 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ffe1ea;
+        }
+
+        .timer-row .t-name {
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 14.5px;
+            color: #a8607b;
+        }
+
+        .timer-row .t-val {
+            background: var(--leaf);
+            color: #33543f;
+            font-weight: 700;
+            font-size: 12.5px;
+            padding: 4px 10px;
+            border-radius: 50px;
+        }
+
+        .donation-note {
+            margin-top: 6px;
+            background: linear-gradient(120deg, var(--gold), var(--rose));
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 18px;
+            padding: 14px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            box-shadow: 0 8px 18px rgba(255, 150, 120, .35);
+        }
+
+        .incentives {
+            grid-column: 1 / -1;
+        }
+
+        .incentive-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .incentive-card {
+            background: var(--cream);
+            border: 1px solid #ffe1ea;
+            border-radius: 20px;
+            padding: 18px;
+            text-align: center;
+            position: relative;
+        }
+
+        .incentive-card::before {
+            content: '✿';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold), var(--rose));
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            box-shadow: 0 4px 8px rgba(255, 150, 170, .4);
+        }
+
+        .incentive-card .num {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--rose);
+            margin-top: 6px;
+        }
+
+        .incentive-card .desc {
+            font-weight: 600;
+            font-size: 13.5px;
+            color: #a8607b;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .incentive-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            h1 {
+                font-size: 42px;
+                letter-spacing: 3px;
+            }
+        }
